@@ -14,9 +14,7 @@ public class HelloWorld {
 
 	public static void main(String... args) {
 		String log4jConfigFile = System.getProperty("log4j.configuration");
-		if(log4jConfigFile == null) {
-			DOMConfigurator.configure("src/log4j.xml");
-		} else {
+		if(log4jConfigFile != null) {
 			DOMConfigurator.configure(log4jConfigFile);
 		}
 		if (args.length > 0) {
